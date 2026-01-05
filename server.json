@@ -1,0 +1,8 @@
+{
+    "name":"MyFirstCBAppServer",
+    "web":{
+        "rewrites":{
+            "enable":"true"
+        }
+    }
+}
