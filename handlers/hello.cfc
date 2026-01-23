@@ -25,16 +25,19 @@ component extends="coldbox.system.EventHandler"{
 		// event.setLayout( "AnotherLayout" );
 		// event.setView( view="hello/index2", name="mytest" );
 		// event.setLayout( "AnotherLayout" );
-
+		// event.setValue("name", "Zhangsan");
+		// prc.nameExists = event.valueExists( "name" );
+		// event.setView( view='hello/index', args={ "test":"mytest", "age":30 } );
+		// relocate( event="hello.index2", queryString="id=567&com=hwtl" );
+		relocate( url="https://www.sunpengcheng.com" );
 	}
 
 	function index2( event, rc, prc ){
-
 		event.noLayout();
 	}
 
 	function update( event, rc, prc ){
-
+		event.setView( view='hello/update', cache=true );
 		event.noLayout();
 	}
 

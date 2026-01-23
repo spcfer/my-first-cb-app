@@ -63,8 +63,7 @@ component {
 		settings = {
 			useSkins = true,
 			myCoolArray = [1,2,3,4],
-			skinsPath = "views/skins",
-			isPengcheng = "pcY"
+			skinsPath = "views/skins"
 		};
 
 		/**

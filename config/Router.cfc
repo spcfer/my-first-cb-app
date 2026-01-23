@@ -35,10 +35,6 @@ component {
 			return { "error" : false, "data" : "Welcome to my awesome API!" };
 		} );
 
-		route( "/hello/index2/:id?").to("hello.index2" ).withVerbs( "GET" ).end();
-		route( "/hello/index2/:id?").to("hello.update" ).withVerbs( "PUT" ).end();
-		route( "/hello/index2/:id?").withVerbs( "CUST" ).to("hello.cust" ).end();
-
 		// Conventions-Based Routing
 		route( ":handler/:action?" ).end();
 	}
