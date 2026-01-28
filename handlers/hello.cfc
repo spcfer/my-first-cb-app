@@ -41,5 +41,12 @@ component extends="coldbox.system.EventHandler"{
 		event.noLayout();
 	}
 
+	function renderHTML(){
+		// event.renderData( data="<h1>This is HTML content</h1>" );
+		// event.renderData( type="PDF", data="<h1>This is HTML content</h1>" );
+		// event.renderData( type="PDF", data=view("hello/index2") );
+		// event.renderData( data="my data", formats="xml,json,html,pdf", formatsView="hello/index" );
+		event.renderData( data="cust data", formats="xml,json,html,pdf", formatsRedirect={event="hello.index2"} );
+	}
 }
 
