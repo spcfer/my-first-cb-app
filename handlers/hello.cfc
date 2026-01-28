@@ -13,6 +13,23 @@ component extends="coldbox.system.EventHandler"{
 	this.aroundHandler_except = "";
 	this.allowedMethods = {};
 
+	function preHandler () {
+		event.setPrivateValue( "preHandlerExecuted", true );
+	}
+
+	function preIndex () {
+		event.setPrivateValue( "preIndexExecuted", true );
+		log.info("Starting executing the index action");
+	}
+
+	function postHandler () {
+		event.setPrivateValue( "postHandlerExecuted", true );
+	}
+
+	function postIndex2 () {
+		event.setPrivateValue( "postIndex2Executed", true );
+	}
+
 	/**
 	 * Display a listing of the resource
 	 */
@@ -29,7 +46,7 @@ component extends="coldbox.system.EventHandler"{
 		// prc.nameExists = event.valueExists( "name" );
 		// event.setView( view='hello/index', args={ "test":"mytest", "age":30 } );
 		// relocate( event="hello.index2", queryString="id=567&com=hwtl" );
-		relocate( url="https://www.sunpengcheng.com" );
+		// relocate( url="https://www.sunpengcheng.com" );
 	}
 
 	function index2( event, rc, prc ){
